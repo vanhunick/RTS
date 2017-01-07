@@ -1,37 +1,18 @@
-/**
- * Created by Nicky on 7/01/2017.
- */
+function update() {
+    renderer.render(stage);
+    requestAnimationFrame(update);
+}
 
-var renderer = PIXI.autoDetectRenderer(800, 600,{backgroundColor : 0x1099bb});
+var renderer = PIXI.autoDetectRenderer(1280, 720, { backgroundColor: 0x7eC0ee }); // Sky blue background
 document.body.appendChild(renderer.view);
 
-// create the root of the scene graph
-var stage = new PIXI.Container();
+requestAnimationFrame(update);
 
-// create a texture from an image path
-var texture = PIXI.Texture.fromImage('required/assets/basics/bunny.png');
+var instanceConfig = {
+    mapDataPath:  "resources/test_map.xml",
+    assetsToLoad: ["resources/grass.png"]
+};
 
-// create a new Sprite using the texture
-var bunny = new PIXI.Sprite(texture);
-
-// center the sprite's anchor point
-bunny.anchor.x = 0.5;
-bunny.anchor.y = 0.5;
-
-// move the sprite to the center of the screen
-bunny.position.x = 200;
-bunny.position.y = 150;
-
-stage.addChild(bunny);
-
-// start animating
-animate();
-function animate() {
-    requestAnimationFrame(animate);
-
-    // just for fun, let's rotate mr rabbit a little
-    bunny.rotation += 0.1;
-
-    // render the container
-    renderer.render(stage);
-}
+stage = new PIXI.Stage();
+var engine = TRAVISO.getEngineInstance(instanceConfig);
+stage.addChild(engine);

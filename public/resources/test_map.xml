@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<map_data>
+    <tiles>
+        <tile id="1" movable="1">resources/grass.png</tile>
+    </tiles>
+
+    <objects>
+    </objects>
+
+    <ground_map>
+        <row>1,1,1,1</row>
+        <row>1,1,1,1</row>
+        <row>1,1,1,1</row>
+        <row>1,1,1,1</row>
+    </ground_map>
+
+    <object_map>
+        <row>0,0,0,0</row>
+        <row>0,0,0,0</row>
+        <row>0,0,0,0</row>
+        <row>0,0,0,0</row>
+    </object_map>
+</map_data>
