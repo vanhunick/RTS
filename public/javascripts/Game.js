@@ -9,7 +9,6 @@ var renderer = PIXI.autoDetectRenderer(1280, 720, { backgroundColor: 0x7eC0ee })
 console.log("Test "  + document.getElementById("gameDiv"));
 document.getElementById("gameDiv").appendChild(renderer.view);
 
-
 requestAnimationFrame(update);
 
 var instanceConfig = {
