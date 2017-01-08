@@ -13,7 +13,7 @@ requestAnimationFrame(update);
 
 var instanceConfig = {
     mapDataPath:  'resources/test_map.xml',
-    assetsToLoad: ['resources/grass.png']
+    assetsToLoad: ['resources/grass.png', 'resources/grass_dark.png']
 };
 
 stage = new PIXI.Stage();
